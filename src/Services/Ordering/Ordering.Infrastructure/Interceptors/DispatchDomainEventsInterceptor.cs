@@ -36,6 +36,8 @@ namespace Ordering.Infrastructure.Interceptors
 
             aggregates.ToList().ForEach(a => a.ClearDomainEvents());
 
+
+            //go to order create event handler
             foreach (var domainEvent in domainEvents) { 
                 await mediator.Publish(domainEvent);            
             }
