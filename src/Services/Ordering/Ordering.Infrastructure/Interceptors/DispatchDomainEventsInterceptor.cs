@@ -17,6 +17,7 @@ namespace Ordering.Infrastructure.Interceptors
 
         public override async ValueTask<InterceptionResult<int>> SavingChangesAsync(DbContextEventData eventData, InterceptionResult<int> result, CancellationToken cancellationToken = default)
         {
+            // after create order event handler is called
             await DispatchDomaineEvents(eventData.Context);
             return await base.SavingChangesAsync(eventData, result, cancellationToken);
         }
