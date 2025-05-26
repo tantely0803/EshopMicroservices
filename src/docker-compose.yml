@@ -1,5 +1,8 @@
 version: '3.4'
 
+# run manualy
+# docker-compose -f docker-compose.yaml -f docker-compose.override.yml up -d
+
 services:
   catalogdb:
     image: postgres
@@ -34,7 +37,14 @@ services:
       context: .
       dockerfile: Services/Discount/Discount.Grpc/Dockerfile
 
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+
 volumes:
   postgres_catalog:
   postgres_basket:
+
 
