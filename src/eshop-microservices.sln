@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Services\Bask
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Messaging", "BuildingBlocks\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj", "{CE892A1B-23CF-4058-8D3F-8D66B4DD2EEB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGetways", "ApiGetways", "{022E594E-86DE-4465-B792-BE365F8F2645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YarpApiGateway", "ApiGateways\YarpApiGateway\YarpApiGateway.csproj", "{BD10A22E-A07B-4579-A2E9-A388095A8746}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,10 @@ Global
 		{CE892A1B-23CF-4058-8D3F-8D66B4DD2EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE892A1B-23CF-4058-8D3F-8D66B4DD2EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE892A1B-23CF-4058-8D3F-8D66B4DD2EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD10A22E-A07B-4579-A2E9-A388095A8746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD10A22E-A07B-4579-A2E9-A388095A8746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD10A22E-A07B-4579-A2E9-A388095A8746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD10A22E-A07B-4579-A2E9-A388095A8746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +107,7 @@ Global
 		{7FF22F64-3E68-470D-AD28-BBB94093611A} = {8A039AEE-EF0B-4DD1-A1F5-5EB687AADB97}
 		{C93DEBF5-6228-4236-9FF9-AAE585BC290E} = {31304917-9E5C-47CB-9654-95F48F609AF3}
 		{CE892A1B-23CF-4058-8D3F-8D66B4DD2EEB} = {8B256497-DB33-4D9B-BA45-102E4A4FC3F2}
+		{BD10A22E-A07B-4579-A2E9-A388095A8746} = {022E594E-86DE-4465-B792-BE365F8F2645}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F538F105-519B-4259-8EAB-9959C19B214C}
