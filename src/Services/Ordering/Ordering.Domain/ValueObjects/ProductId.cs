@@ -5,7 +5,7 @@ namespace Ordering.Domain.ValueObjects
     {
         public Guid Value { get; }
 
-        private ProductId(Guid value) => value = value;
+        private ProductId(Guid value) => Value = value;
 
         public static ProductId Of(Guid value)
         {

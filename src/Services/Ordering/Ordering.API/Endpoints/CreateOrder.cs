@@ -1,6 +1,4 @@
 ﻿
-using Ordering.Application.Orders.Commands.CreateOrder;
-
 namespace Ordering.API.Endpoints
 {
     public record CreateOrderRequest(OrderDto order);
@@ -11,7 +9,7 @@ namespace Ordering.API.Endpoints
     public class CreateOrder : ICarterModule
     {
 
-        //accept a create order request object 
+        // accept a create order request object 
         // maps the request to a CreateOrderCommand object
         // Use MediatR to send the command to the appropriate handler
         // return a response object with the order id 
@@ -19,7 +17,8 @@ namespace Ordering.API.Endpoints
         {
             app.MapPost("/orders", async (CreateOrderRequest request, ISender sender) =>
             {
-                var command = request.Adapt<CreateOrderCommand>();
+                //var command = request.Adapt<CreateOrderCommand>();
+                var command = new CreateOrderCommand(request.order);
 
                 var result = await sender.Send(command);
 

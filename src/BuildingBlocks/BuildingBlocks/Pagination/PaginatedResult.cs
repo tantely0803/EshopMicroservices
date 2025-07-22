@@ -14,6 +14,6 @@ namespace BuildingBlocks.Pagination
 
         public long Count {  get; } = count;
 
-        public IEnumerable<TEntity> Data { get; }
+        public IEnumerable<TEntity> Data { get; } = data;
     }
 }

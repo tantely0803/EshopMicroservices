@@ -65,6 +65,6 @@ app.UseHealthChecks("/health",
           ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
       });
 
-app.MapGet("/", () => "Hello World!");
+//app.MapGet("/", () => "Hello World!");
 
 app.Run();

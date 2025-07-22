@@ -11,7 +11,7 @@ namespace Ordering.Application.Extentions
         public static IEnumerable<OrderDto> ToOrderDtoList(this IEnumerable<Order> orders) 
         {
             return orders.Select(order => new OrderDto(
-                 Id: order.Id.Value,
+                    Id: order.Id.Value,
                     CustomerId: order.CustomerId.Value,
                     OrderName: order.OrderName.Value,
                     ShippingAddress: new AddressDto(

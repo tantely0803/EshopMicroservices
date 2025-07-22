@@ -58,12 +58,12 @@ namespace Ordering.Domain.Models
             AddDomainEvent(new OrderUpdatedEvent(this));
         }
 
-        public void Add(ProductId productId, int quanity, decimal price) 
+        public void Add(ProductId productId, int quantity, decimal price) 
         {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(quanity);
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(quantity);
             ArgumentOutOfRangeException.ThrowIfNegativeOrZero(price);
 
-            var orderItem = new OrderItem( Id, productId, quanity, price );
+            var orderItem = new OrderItem( Id, productId, quantity, price );
             _orderItems.Add( orderItem );
         }
 

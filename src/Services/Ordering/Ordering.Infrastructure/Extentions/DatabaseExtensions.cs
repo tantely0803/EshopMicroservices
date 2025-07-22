@@ -10,7 +10,7 @@ namespace Ordering.Infrastructure.Extentions
 
             var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-             context.Database.MigrateAsync().GetAwaiter().GetResult();
+            context.Database.MigrateAsync().GetAwaiter().GetResult();
 
             await SeedAsync(context);
         }

@@ -10,6 +10,7 @@ namespace Ordering.Domain.ValueObjects
         public string Country {  get; } = default!;
         public string State { get; } = default!;
         public string ZipCode { get; } = default!;
+
         protected Address() 
         { 
         }
@@ -22,6 +23,7 @@ namespace Ordering.Domain.ValueObjects
             AddressLine = addressLine;
             Country = country;
             ZipCode = zipcode;
+            State = state;
         }
 
         public static Address Of(string firsName, string lastName, string emailAddress, string addressLine, string country, string state, string zipcode)

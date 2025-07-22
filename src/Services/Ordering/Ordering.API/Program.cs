@@ -13,11 +13,14 @@ builder.Services
 
 var app = builder.Build();
 
+app.UseApiServices();
+
 //Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     await app.InitiliseDatabaseAsync();
 }
+
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();

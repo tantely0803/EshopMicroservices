@@ -7,8 +7,8 @@ namespace Ordering.Application.Orders.Commands.CreateOrder
     {
         public async Task<CreateOrderResult> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
         {
-            //create Order entity from entity object 
-            //save to database
+            // create Order entity from entity object 
+            // save to database
             // return result
             var order = CreateNewOrder(command.Order);
 
@@ -41,7 +41,7 @@ namespace Ordering.Application.Orders.Commands.CreateOrder
                 orderName: OrderName.Of(orderDto.OrderName),
                 shippingAddress: shippingAddress,
                 billingAddress: billingAddress,
-                payment: Payment.Of(orderDto.Payment.CardName , orderDto.Payment.CardName, orderDto.Payment.Expiration, orderDto.Payment.Cvv, orderDto.Payment.PaymentMethod)
+                payment: Payment.Of(orderDto.Payment.CardName , orderDto.Payment.CardNumber, orderDto.Payment.Expiration, orderDto.Payment.Cvv, orderDto.Payment.PaymentMethod)
                 );
 
             foreach(var orderItemDto in orderDto.OrderItems)

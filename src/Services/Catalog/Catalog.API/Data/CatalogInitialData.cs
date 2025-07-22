@@ -11,8 +11,9 @@ namespace Catalog.API.Data
             if (await session.Query<Product>().AnyAsync()) { 
             }
 
-            session.Store<Product>(GetPreconfiguredProducts());
-            await session.SaveChangesAsync();
+            //session.Store<Product>(GetPreconfiguredProducts());
+
+            //await session.SaveChangesAsync();
         }
 
         private static IEnumerable<Product> GetPreconfiguredProducts() => new List<Product>()

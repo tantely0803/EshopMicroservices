@@ -35,27 +35,27 @@ namespace Ordering.Infrastructure.Extentions
 
                 var order1 = Order.Create(
                     OrderId.Of(Guid.NewGuid()),
-                    CustomerId.Of(new Guid("000529f1-2c37-4985-b56c-bcd9ccff33db")),
+                    CustomerId.Of(new Guid("4c38df16-969b-414b-ad40-50c83fe233bd")),
                     OrderName.Of("ORD_1"),
                     shippingAddress: address1,
                     billingAddress : address2,
                     payment1
                     );
 
-                order1.Add(ProductId.Of(new Guid("d0b770d7-e95c-4dc7-9f0e-4258a74429e5")), 2, 500);
-                order1.Add(ProductId.Of(new Guid("01a002c5-8f78-4718-a575-244e15a5c26b")), 1, 400);
+                order1.Add(ProductId.Of(new Guid("3fdbb6f9-bd8a-4628-b80b-94231b94d5f5")), 2, 500);
+                order1.Add(ProductId.Of(new Guid("79854db1-4d4c-4221-8462-b7249c13da5d")), 1, 400);
 
                 var order2 = Order.Create(
                   OrderId.Of(Guid.NewGuid()),
-                  CustomerId.Of(new Guid("51baae59-19d7-4a01-8d37-5cc069c6cfed")),
+                  CustomerId.Of(new Guid("4c38df16-969b-414b-ad40-50c83fe233bd")),
                   OrderName.Of("ORD_2"),
                   shippingAddress: address2,
                   billingAddress: address2,
                   payment2
                   );
 
-                order2.Add(ProductId.Of(new Guid("7f84d560-5fb5-49a7-9fd9-5f015b248b1f")), 2, 500);
-                order2.Add(ProductId.Of(new Guid("056f15b1-5224-4958-9477-b7953f7d4703")), 1, 400);
+                order2.Add(ProductId.Of(new Guid("2dd99450-3683-4215-9427-d7443cf6f774")), 2, 500);
+                order2.Add(ProductId.Of(new Guid("1b86a94a-9a12-4d8a-a066-2454b49daa8d")), 1, 400);
 
                 return new List<Order> { order1, order2 };
             }
