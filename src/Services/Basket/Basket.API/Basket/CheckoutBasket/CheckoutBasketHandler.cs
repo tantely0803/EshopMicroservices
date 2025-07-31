@@ -43,7 +43,6 @@ namespace Basket.API.Basket.CheckoutBasket
             await publishEndpoint.Publish(eventMessage, cancellationToken);
 
             await repository.DeleteBasket(command.BasketCheckoutDto.UserName, cancellationToken);
-
             // call checkout event to rabbitmq using masstransit
 
             return new CheckoutBasketResult(true);
